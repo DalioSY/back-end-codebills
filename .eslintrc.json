@@ -22,24 +22,34 @@
     "no-useless-constructor": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "prettier/prettier": [
-      "error", 
+      "error",
       {
-        "singleQuote": false,
         "tabWidth": 2,
+        "singleQuote": "es6",
+        "trailingComma": "all",
+        "arrowParens": "always",
         "semi": true,
-        "arrowParens": "avoid",
-        "endOfLine": "auto",
-        "trailingComma": "all"
+        "endOfLine": "lf"
       }
     ],
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always",
-        "groups": [ "/^node:*/","module", "/^@shared/",
-          ["parent", "sibling", "index" ]
+        "groups": [
+          "/^node:*/",
+          "module",
+          "/^@shared/",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
         ],
-        "alphabetize": {"order": "asc","ignoreCase": true }
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
       }
     ]
   }
